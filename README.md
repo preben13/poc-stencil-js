@@ -1,1 +1,1 @@
-# poc-stencil-js
+# POC web components

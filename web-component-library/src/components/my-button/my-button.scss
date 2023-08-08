@@ -1,0 +1,18 @@
+/* button.css */
+.button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #ffc421;
+  color: #291d18;
+  cursor: pointer;
+  font-size: 16px;
+  &:hover{
+    background-color: #ffb61b;
+  }
+  &:[disabled] {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+}
+
