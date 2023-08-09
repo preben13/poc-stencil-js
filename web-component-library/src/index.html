@@ -19,6 +19,7 @@
         imgurl="https://dummyimage.com/300/ffc421/291d18.png"
       ></my-card>
       <my-button label="Submit"></my-button>
+      <my-button label="Disabled" disabled="true"></my-button>
     </div>
     <div>
       <my-accordion>
@@ -34,6 +35,15 @@
           This is the content for Accordion Item 2.
         </div>
       </my-accordion>
+
+      <my-badge value="Badge"></my-badge>
+
+      <my-horizontal-tab tabs='["one", "two", "three"]'>
+        <div slot="one">Content for Tab 1</div>
+        <div slot="two">Content for Tab 2</div>
+        <div slot="three">Content for Tab 3</div>
+      </my-horizontal-tab>
+
     </div>
   </body>
 </html>

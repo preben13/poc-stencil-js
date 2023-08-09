@@ -8,6 +8,9 @@ import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface MyAccordion {
     }
+    interface MyBadge {
+        "value": string;
+    }
     interface MyButton {
         "disabled": boolean;
         "label": string;
@@ -31,6 +34,10 @@ export namespace Components {
          */
         "middle": string;
     }
+    interface MyHorizontalTab {
+        "innerTabs": string[];
+        "tabs": string;
+    }
 }
 declare global {
     interface HTMLMyAccordionElement extends Components.MyAccordion, HTMLStencilElement {
@@ -38,6 +45,12 @@ declare global {
     var HTMLMyAccordionElement: {
         prototype: HTMLMyAccordionElement;
         new (): HTMLMyAccordionElement;
+    };
+    interface HTMLMyBadgeElement extends Components.MyBadge, HTMLStencilElement {
+    }
+    var HTMLMyBadgeElement: {
+        prototype: HTMLMyBadgeElement;
+        new (): HTMLMyBadgeElement;
     };
     interface HTMLMyButtonElement extends Components.MyButton, HTMLStencilElement {
     }
@@ -57,15 +70,26 @@ declare global {
         prototype: HTMLMyComponentElement;
         new (): HTMLMyComponentElement;
     };
+    interface HTMLMyHorizontalTabElement extends Components.MyHorizontalTab, HTMLStencilElement {
+    }
+    var HTMLMyHorizontalTabElement: {
+        prototype: HTMLMyHorizontalTabElement;
+        new (): HTMLMyHorizontalTabElement;
+    };
     interface HTMLElementTagNameMap {
         "my-accordion": HTMLMyAccordionElement;
+        "my-badge": HTMLMyBadgeElement;
         "my-button": HTMLMyButtonElement;
         "my-card": HTMLMyCardElement;
         "my-component": HTMLMyComponentElement;
+        "my-horizontal-tab": HTMLMyHorizontalTabElement;
     }
 }
 declare namespace LocalJSX {
     interface MyAccordion {
+    }
+    interface MyBadge {
+        "value"?: string;
     }
     interface MyButton {
         "disabled"?: boolean;
@@ -90,11 +114,17 @@ declare namespace LocalJSX {
          */
         "middle"?: string;
     }
+    interface MyHorizontalTab {
+        "innerTabs"?: string[];
+        "tabs"?: string;
+    }
     interface IntrinsicElements {
         "my-accordion": MyAccordion;
+        "my-badge": MyBadge;
         "my-button": MyButton;
         "my-card": MyCard;
         "my-component": MyComponent;
+        "my-horizontal-tab": MyHorizontalTab;
     }
 }
 export { LocalJSX as JSX };
@@ -102,9 +132,11 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "my-accordion": LocalJSX.MyAccordion & JSXBase.HTMLAttributes<HTMLMyAccordionElement>;
+            "my-badge": LocalJSX.MyBadge & JSXBase.HTMLAttributes<HTMLMyBadgeElement>;
             "my-button": LocalJSX.MyButton & JSXBase.HTMLAttributes<HTMLMyButtonElement>;
             "my-card": LocalJSX.MyCard & JSXBase.HTMLAttributes<HTMLMyCardElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "my-horizontal-tab": LocalJSX.MyHorizontalTab & JSXBase.HTMLAttributes<HTMLMyHorizontalTabElement>;
         }
     }
 }

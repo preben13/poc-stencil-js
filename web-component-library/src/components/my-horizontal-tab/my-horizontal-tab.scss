@@ -1,0 +1,28 @@
+/* horizontal-tab.css */
+.horizontal-tab {
+  display: flex;
+  flex-direction: column;
+}
+
+.tab-buttons {
+  display: flex;
+  border-bottom: 1px solid #e5e3e3;
+}
+
+.tab-button {
+  padding: 10px 20px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.tab-button.active {
+  border-bottom: 2px solid #ffc421;
+}
+
+.tab-content {
+  padding: 20px;
+  border: 1px solid #e5e3e3;
+  border-top: none;
+}
