@@ -16,9 +16,9 @@ export namespace Components {
         "label": string;
     }
     interface MyCard {
+        "cardtitle": string;
         "description": string;
         "imgurl": string;
-        "title": string;
     }
     interface MyComponent {
         /**
@@ -96,9 +96,9 @@ declare namespace LocalJSX {
         "label"?: string;
     }
     interface MyCard {
+        "cardtitle"?: string;
         "description"?: string;
         "imgurl"?: string;
-        "title"?: string;
     }
     interface MyComponent {
         /**

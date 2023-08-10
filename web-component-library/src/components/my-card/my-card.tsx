@@ -7,7 +7,7 @@ import { Component, h, Prop } from '@stencil/core';
   shadow: false,
 })
 export class MyCard {
-  @Prop() title: string;
+  @Prop() cardtitle: string;
   @Prop() description: string;
   @Prop() imgurl: string;
 
@@ -16,7 +16,7 @@ export class MyCard {
       <div class="card">
         {this.imgurl && <img src={this.imgurl} alt="Card Image" />}
         <div class="card-content">
-          {this.title && <h2>{this.title}</h2>}
+          {this.cardtitle && <h2>{this.cardtitle}</h2>}
           {this.description && <p>{this.description}</p>}
         </div>
       </div>
